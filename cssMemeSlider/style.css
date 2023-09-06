@@ -125,11 +125,19 @@ input[type='radio']:nth-child(5):checked
   border: 0.5rem solid #fff;
 }
 
-.slider__container-img {
+.slider__wrap-img {
+  display: flex;
   aspect-ratio: 16/9;
   background-color: #fff;
   overflow: hidden;
-  display: flex;
+}
+
+.slider__img {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  object-fit: fill;
+  transition: 1s;
+  transform: translateX(0%);
 }
 
 .slider__content {
