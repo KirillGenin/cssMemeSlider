@@ -6,6 +6,10 @@
 
 :root {
   --max-width: 1000px;
+  --bg-color-main: #262424;
+  --btn-color-main: #4e1fbb;
+  --btn-color-bg: #fff;
+  --btn-color-hover: #8790c4;
 }
 
 html {
@@ -17,7 +21,7 @@ body {
   align-items: center;
   justify-content: center;
   height: 100vh;
-  background-color: #262424;
+  background-color: var(--bg-color-main);
   color: #fff;
 }
 
@@ -31,14 +35,14 @@ body {
   width: 5rem;
   height: 5rem;
   border-radius: 50%;
-  background: radial-gradient(circle closest-side, #fff 60%, transparent 65%);
+  background: radial-gradient(circle closest-side, var(--btn-color-bg) 60%, transparent 65%);
   cursor: pointer;
 }
 
 .slider__btn:hover {
   background: radial-gradient(
     circle closest-side,
-    #8790c4 60%,
+    var(--btn-color-hover) 60%,
     transparent 65%
   );
 }
@@ -46,7 +50,7 @@ body {
 .slider__btn:active {
   background: radial-gradient(
     circle closest-side,
-    #4e1fbb 60%,
+    var(--btn-color-main) 60%,
     transparent 65%
   );
   transform: scale(0.95);
@@ -78,9 +82,9 @@ input[type='radio']:nth-child(5):checked
   .slider__btn:nth-child(5) {
   background: radial-gradient(
     circle closest-side,
-    #4e1fbb 30%,
-    #fff 32%,
-    #fff 60%,
+    var(--btn-color-main) 30%,
+    var(--btn-color-bg) 32%,
+    var(--btn-color-bg) 60%,
     transparent 65%
   );
 }
@@ -107,9 +111,9 @@ input[type='radio']:nth-child(5):checked
   .slider__btn:nth-child(5):hover {
   background: radial-gradient(
     circle closest-side,
-    #fff 30%,
-    #4e1fbb 32%,
-    #4e1fbb 60%,
+    var(--btn-color-bg) 30%,
+    var(--btn-color-main) 32%,
+    var(--btn-color-main) 60%,
     transparent 65%
   );
 }
