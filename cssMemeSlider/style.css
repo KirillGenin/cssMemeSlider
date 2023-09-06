@@ -27,6 +27,7 @@ body {
 
 .slider__btn-line {
   display: flex;
+  align-items: center;
   column-gap: 0.5rem;
 }
 
@@ -125,6 +126,7 @@ input[type='radio']:nth-child(5):checked
 .slider {
   display: flex;
   flex-direction: column;
+  row-gap: 15px;
   margin: 0 1.5rem;
   padding: 0.5rem;
   width: 100%;
@@ -133,7 +135,7 @@ input[type='radio']:nth-child(5):checked
   border: 0.5rem solid #fff;
 }
 
-.slider__wrap-img {
+.slider__container-img {
   display: flex;
   aspect-ratio: 16/9;
   background-color: #fff;
@@ -151,27 +153,69 @@ input[type='radio']:nth-child(5):checked
 .slider__content {
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  gap: 15px;
+  overflow: hidden;
+  height: 7rem;
 }
 
 .slider__container-text {
-  overflow: hidden;
   flex-grow: 1;
-  background-color: #65d882;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
-input[type='radio']:nth-child(2):checked ~ .slider__wrap-img .slider__img {
+.slider__text {
+  flex-basis: 100%;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  font-size: 3rem;
+  transform: translateY(0%);
+  transition: 1s;
+}
+
+input[type='radio']:nth-child(2):checked ~ .slider__container-img .slider__img {
   transform: translateX(-100%);
 }
 
-input[type='radio']:nth-child(3):checked ~ .slider__wrap-img .slider__img {
+input[type='radio']:nth-child(3):checked ~ .slider__container-img .slider__img {
   transform: translateX(-200%);
 }
 
-input[type='radio']:nth-child(4):checked ~ .slider__wrap-img .slider__img {
+input[type='radio']:nth-child(4):checked ~ .slider__container-img .slider__img {
   transform: translateX(-300%);
 }
 
-input[type='radio']:nth-child(5):checked ~ .slider__wrap-img .slider__img {
+input[type='radio']:nth-child(5):checked ~ .slider__container-img .slider__img {
   transform: translateX(-400%);
+}
+
+/* TEXT */
+input[type='radio']:nth-child(2):checked
+  ~ .slider__content
+  .slider__container-text
+  .slider__text {
+  transform: translateY(-100%);
+}
+
+input[type='radio']:nth-child(3):checked
+  ~ .slider__content
+  .slider__container-text
+  .slider__text {
+  transform: translateY(-200%);
+}
+
+input[type='radio']:nth-child(4):checked
+  ~ .slider__content
+  .slider__container-text
+  .slider__text {
+  transform: translateY(-300%);
+}
+
+input[type='radio']:nth-child(5):checked
+  ~ .slider__content
+  .slider__container-text
+  .slider__text {
+  transform: translateY(-400%);
 }
