@@ -25,6 +25,41 @@ body {
   color: #fff;
 }
 
+.title {
+  font-size: 2.5rem;
+  text-align: center;
+  color: #fff;
+  letter-spacing: 0;
+  animation: color 3s infinite;
+}
+
+@keyframes color {
+  from {
+    color: #fff;
+    letter-spacing: 0;
+  }
+
+  25% {
+    color: #1cce48;
+    letter-spacing: 0.5rem;
+  }
+
+  50% {
+    color: #ec4807;
+    letter-spacing: 1rem;
+  }
+
+  75% {
+    color: var(--btn-color-main);
+    letter-spacing: 0.5rem;
+  }
+
+  to {
+    color: #fff;
+    letter-spacing: 0;
+  }
+}
+
 .slider__btn-line {
   display: flex;
   align-items: center;
