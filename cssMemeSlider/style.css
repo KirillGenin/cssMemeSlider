@@ -167,6 +167,7 @@ input[type='radio']:nth-child(5):checked
   width: 100%;
   max-width: var(--max-width);
   height: auto;
+  max-height: 100%;
   border: 0.5rem solid #fff;
 }
 
