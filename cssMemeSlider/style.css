@@ -162,6 +162,7 @@ input[type='radio']:nth-child(5):checked
 .slider {
   display: flex;
   flex-direction: column;
+  align-items: center;
   row-gap: 1.5rem;
   margin: 0 1.5rem;
   padding: 0.5rem;
@@ -174,6 +175,7 @@ input[type='radio']:nth-child(5):checked
 
 .slider__container-img {
   display: flex;
+  width: 90%;
   aspect-ratio: 16/9;
   border-radius: 1.5rem;
   overflow: hidden;
